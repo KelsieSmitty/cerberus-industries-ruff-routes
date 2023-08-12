@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Urbanist&display=swap");
+
+.navbar {
+  font-family: "Urbanist";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.custom-underline {
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.custom-underline:hover,
+.custom-underline:focus {
+  text-decoration: underline;
+}
