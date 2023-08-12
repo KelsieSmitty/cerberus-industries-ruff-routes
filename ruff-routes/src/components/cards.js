@@ -1,9 +1,11 @@
 import hikingDog from "../images/hiking-dog.png";
+import iconArrow from "../images/icon-arrow.png";
+import { FaLocationArrow } from "react-icons/fa";
 
 export default function Cards() {
   return (
     <div
-      className=" container-fluid text-center pb-0 m-0"
+      className=" container-fluid pb-0 m-0"
       style={{
         backgroundColor: "rgba(245,245,245,1)",
       }}
@@ -37,9 +39,9 @@ export default function Cards() {
                 borderRadius: "0.5rem",
               }}
             />
-            <div className="card-body container text-center">
+            <div className="card-body container ">
               <div className="row row-cols-auto">
-                <div className="col">
+                <div className="col" style={{ borderRight: "1px black solid" }}>
                   <h6
                     className="card-sub-title text-start"
                     style={{
@@ -49,10 +51,10 @@ export default function Cards() {
                       padding: "0",
                     }}
                   >
-                    PARK |
+                    PARK
                   </h6>
                 </div>
-                <div className="col">
+                <div className="col" style={{ borderRight: "1px black solid" }}>
                   <h6
                     className="card-sub-title text-start"
                     style={{
@@ -62,7 +64,7 @@ export default function Cards() {
                       padding: "0",
                     }}
                   >
-                    POINT OF INTEREST |
+                    POINT OF INTEREST
                   </h6>
                 </div>
                 <div className="col">
@@ -80,21 +82,33 @@ export default function Cards() {
                 </div>
               </div>
 
-              <h5 className="card-title">Meola Reef Dog Park</h5>
-              <p
-                className="card-text"
+              <h5 className="card-title pt-4">Meola Reef Dog Park</h5>
+              <h5
+                className="card-distance"
                 style={{
-                  width: "16rem",
-                  height: "3rem",
+                  fontSize: "1.1rem",
+                  fontWeight: "400",
+                  fontFamily: "Lilita One",
+                  width: "3rem",
                 }}
               >
-                Male, puppy.
+                2.3km
+              </h5>
+              <p
+                className="card-address text-start mb-5"
+                style={{
+                  color: "#646464",
+                  fontFamily: "Urbanist",
+                  fontSize: "0.9rem",
+                }}
+              >
+                81-189 Meola Road, Western Springs, Auckland 1022
               </p>
               <a
                 href="https://savinghope.co.nz/dogs/maverick/"
-                className="btn btn-info"
+                className=" map custom-button ps-2 pe-2 pt-1 pb-1"
               >
-                Take Me Home!
+                Show on map <FaLocationArrow />
               </a>
             </div>
           </div>
