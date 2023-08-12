@@ -34,22 +34,14 @@ export default function ExploreNavbar() {
             }}
             className="d-inline-block align-text-center "
           />
+          <a className="navbar-brand nav-heading ps-4 pe-3 pt-1 " href="#home">
+            Ruff Routes
+          </a>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto ps-5 pe-5">
-            <Nav.Link
-              href="#home"
-              style={{
-                color: "black",
-                paddingRight: "1rem",
-                paddingLeft: "1rem",
-              }}
-              className="custom-underline"
-            >
-              Home
-            </Nav.Link>
             <Nav.Link
               href="#explore"
               style={{
@@ -61,6 +53,7 @@ export default function ExploreNavbar() {
             >
               Explore
             </Nav.Link>
+
             <Nav.Link
               href="#aboutUs"
               style={{

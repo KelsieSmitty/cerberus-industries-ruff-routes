@@ -3,22 +3,21 @@ import hikingDog from "../images/hiking-dog.png";
 export default function Cards() {
   return (
     <div
-      className=" container-fluid text-center pb-4 m-0"
+      className=" container-fluid text-center pb-0 m-0"
       style={{
         backgroundColor: "rgba(245,245,245,1)",
       }}
     >
       <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 mt-4">
-        {" "}
         <div className="col">
           <div
-            className="card align-items-center  pt-2 "
+            className="card align-items-center "
             style={{
               display: "flex",
               flexDirection: "row",
-              width: "35rem",
+              width: "42rem",
               height: "15rem",
-              borderRadius: "1.18369rem",
+              borderRadius: "0.5rem",
               borderWidth: "0.2rem",
               borderStyle: "solid",
               borderColor: "#000",
@@ -29,28 +28,67 @@ export default function Cards() {
             <img
               src={hikingDog}
               className="card-img-left border rounded"
-              alt="Adoptee1"
+              alt="Hiking Dog"
               style={{
                 width: "45%",
                 height: "100%",
                 objectFit: "cover",
                 border: "2px #56d9f5 solid",
+                borderRadius: "0.5rem",
               }}
             />
-            <div className="card-body">
-              <h5 className="card-title">Maverick</h5>
+            <div className="card-body container text-center">
+              <div className="row row-cols-auto">
+                <div className="col">
+                  <h6
+                    className="card-sub-title text-start"
+                    style={{
+                      fontSize: "0.7rem",
+                      fontWeight: "700",
+                      margin: "0",
+                      padding: "0",
+                    }}
+                  >
+                    PARK |
+                  </h6>
+                </div>
+                <div className="col">
+                  <h6
+                    className="card-sub-title text-start"
+                    style={{
+                      fontSize: "0.7rem",
+                      fontWeight: "700",
+                      margin: "0",
+                      padding: "0",
+                    }}
+                  >
+                    POINT OF INTEREST |
+                  </h6>
+                </div>
+                <div className="col">
+                  <h6
+                    className="card-sub-title text-start"
+                    style={{
+                      fontSize: "0.7rem",
+                      fontWeight: "700",
+                      margin: "0",
+                      padding: "0",
+                    }}
+                  >
+                    ESTABLISHMENT
+                  </h6>
+                </div>
+              </div>
+
+              <h5 className="card-title">Meola Reef Dog Park</h5>
               <p
                 className="card-text"
                 style={{
                   width: "16rem",
-                  height: "9rem",
+                  height: "3rem",
                 }}
               >
                 Male, puppy.
-                <br />
-                <br />
-                Favourite activities include cuddling, eating, playing outside,
-                playing with his toys.
               </p>
               <a
                 href="https://savinghope.co.nz/dogs/maverick/"
