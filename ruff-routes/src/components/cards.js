@@ -116,6 +116,17 @@ export default function Cards() {
 
               <h5 className="card-title pt-4">{item.name}</h5>
               <h5
+                className="card-rating"
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "400",
+                  fontFamily: "Lilita One",
+                  width: "6rem",
+                }}
+              >
+                {item.rating}
+              </h5>
+              <h5
                 className="card-distance"
                 style={{
                   fontSize: "1.1rem",
@@ -127,7 +138,7 @@ export default function Cards() {
                 {item.distance}
               </h5>
               <p
-                className="card-address text-start mb-5"
+                className="card-address text-start mb-3"
                 style={{
                   color: "#646464",
                   fontFamily: "Urbanist",
