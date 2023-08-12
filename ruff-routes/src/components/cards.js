@@ -151,7 +151,7 @@ export default function Cards() {
                 href={item.mapLink}
                 className=" map custom-button ps-2 pe-2 pt-1 pb-1"
               >
-                Show on map <FaLocationArrow />
+                Take me there! <FaLocationArrow />
               </a>
             </div>
           </div>

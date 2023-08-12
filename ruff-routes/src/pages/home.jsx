@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import "../styling/home.css";
-import pawImg from '../images/paw.png'
+import pawImg from "../images/paw.png";
 
 function Home() {
   return (
@@ -20,9 +20,9 @@ function Home() {
                 <a href="/explore"><button className="expore-btn">Explore near me!</button></a>
             </div>
             <div className='empty'></div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
