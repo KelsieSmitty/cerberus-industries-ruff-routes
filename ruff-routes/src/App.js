@@ -1,5 +1,5 @@
-import Explore from './pages/Explore'
-import Home from './pages/Home'
+import Explore from './pages/explore';
+import Home from './pages/home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
