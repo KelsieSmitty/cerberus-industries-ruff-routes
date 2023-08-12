@@ -8,6 +8,9 @@ function Home() {
         <div className='header'>
             <h1 className='header-font'>Ruff Routes</h1>
             <img src={pawImg} className='pawImg' />
+            <a href="#"><li className='header-font'>Explore</li></a>
+            <a href="#"><li className='header-font'>About us</li></a>
+            <a href="#"><li className='header-font'>Suggest a place</li></a>
         </div>
         <div className='container'>
             <div className='content m-3'>
