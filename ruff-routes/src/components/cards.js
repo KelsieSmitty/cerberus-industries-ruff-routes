@@ -1,9 +1,40 @@
+import React, { useState, useEffect } from "react";
 import hikingDog from "../images/hiking-dog.png";
+import cardData from "../data/cardData.json";
+import { FaLocationArrow } from "react-icons/fa";
 
 export default function Cards() {
-  return (
+  const [displayedCards, setDisplayedCards] = useState(5); //initial displayed #
+  const cardsToAdd = 5; //how many cards to add when trigger point is hit
+  const totalCards = cardData.length; //get total # of cards available in the cardData
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 90 //checks if user has scrolled to bottom of the page
+    ) {
+      loadMoreCards();
+    }
+  };
+
+  const loadMoreCards = () => {
+    //calculates # of new cards by adding cardstoadd # set to current total # of cards
+    const newDisplayedCards = Math.min(displayedCards + cardsToAdd, totalCards); //makes sure the new dispalyed cards isn't more than the # of datacards
+    setDisplayedCards(newDisplayedCards); //updates state
+  };
+
+  const dogCards = cardData.slice(0, displayedCards).map((item, index) => (
+    //filters cardData array to show only the displayed cards
     <div
-      className=" container-fluid text-center pb-0 m-0"
+      className=" container-fluid pb-0 m-0"
+      key={index}
       style={{
         backgroundColor: "rgba(245,245,245,1)",
       }}
@@ -37,9 +68,9 @@ export default function Cards() {
                 borderRadius: "0.5rem",
               }}
             />
-            <div className="card-body container text-center">
+            <div className="card-body container ">
               <div className="row row-cols-auto">
-                <div className="col">
+                <div className="col" style={{ borderRight: "1px black solid" }}>
                   <h6
                     className="card-sub-title text-start"
                     style={{
@@ -47,9 +78,24 @@ export default function Cards() {
                       fontWeight: "700",
                       margin: "0",
                       padding: "0",
+                      cursor: "pointer",
                     }}
                   >
-                    PARK |
+                    PARK
+                  </h6>
+                </div>
+                <div className="col" style={{ borderRight: "1px black solid" }}>
+                  <h6
+                    className="card-sub-title text-start"
+                    style={{
+                      fontSize: "0.7rem",
+                      fontWeight: "700",
+                      margin: "0",
+                      padding: "0",
+                      cursor: "pointer",
+                    }}
+                  >
+                    POINT OF INTEREST
                   </h6>
                 </div>
                 <div className="col">
@@ -60,19 +106,7 @@ export default function Cards() {
                       fontWeight: "700",
                       margin: "0",
                       padding: "0",
-                    }}
-                  >
-                    POINT OF INTEREST |
-                  </h6>
-                </div>
-                <div className="col">
-                  <h6
-                    className="card-sub-title text-start"
-                    style={{
-                      fontSize: "0.7rem",
-                      fontWeight: "700",
-                      margin: "0",
-                      padding: "0",
+                      cursor: "pointer",
                     }}
                   >
                     ESTABLISHMENT
@@ -80,386 +114,50 @@ export default function Cards() {
                 </div>
               </div>
 
-              <h5 className="card-title">Meola Reef Dog Park</h5>
-              <p
-                className="card-text"
+              <h5 className="card-title pt-4">{item.name}</h5>
+              <h5
+                className="card-rating"
                 style={{
-                  width: "16rem",
-                  height: "3rem",
+                  fontSize: "1.1rem",
+                  fontWeight: "400",
+                  fontFamily: "Lilita One",
+                  width: "6rem",
                 }}
               >
-                Male, puppy.
+                {item.rating}
+              </h5>
+              <h5
+                className="card-distance"
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "400",
+                  fontFamily: "Lilita One",
+                  width: "3rem",
+                }}
+              >
+                {item.distance}
+              </h5>
+              <p
+                className="card-address text-start mb-3"
+                style={{
+                  color: "#646464",
+                  fontFamily: "Urbanist",
+                  fontSize: "0.9rem",
+                }}
+              >
+                {item.address}
               </p>
               <a
-                href="https://savinghope.co.nz/dogs/maverick/"
-                className="btn btn-info"
+                href={item.mapLink}
+                className=" map custom-button ps-2 pe-2 pt-1 pb-1"
               >
-                Take Me Home!
+                Show on map <FaLocationArrow />
               </a>
             </div>
           </div>
         </div>
-        {/* <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          <img
-            src={adoptee2}
-            className="card-img-top img-fluid border rounded"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-            alt="Adoptee2"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Emmie Jay</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Female, puppy.
-              <br />
-              <br />I love to be kept busy and spend time exploring, playing and
-              learning new things.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/emmie-jay/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          <img
-            src={adoptee3}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Ace</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, puppy.
-              <br />
-              <br />
-              Enjoys a good snuggle on the bed.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/ace-3/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          <img
-            src={adoptee4}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Flame</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, puppy.
-              <br />
-              <br />
-              Flame is a very happy and playful puppy.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/flame/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          {" "}
-          <img
-            src={adoptee5}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Ashlee</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Female, puppy.
-              <br />
-              <br />
-              Very happy to snuggle next to you on the couch.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/ashlee/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 mt-4">
-        {" "}
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(86, 217, 245, 0.0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          {" "}
-          <img
-            src={adoptee6}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Griffin</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, puppy.
-              <br />
-              <br />
-              He loves the company of people and a good snuggle, but he is also
-              content in finding his own space to curl up in.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/griffin/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          {" "}
-          <img
-            src={adoptee7}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Daisy</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Female, puppy.
-              <br />
-              <br />
-              She loves nothing more than to cuddle up on your knee on the sofa.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/daisy-3/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          {" "}
-          <img
-            src={adoptee8}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Rocky</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, puppy.
-              <br />
-              <br />
-              He knows basic commands but is very smart and willing to learn
-              loads more.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/rocky-4/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          <img
-            src={adoptee9}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Cooper</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, puppy.
-              <br />
-              <br />
-              Copper is a people puppy, the more the merrier.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/cooper-2/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div>
-        </div>
-        <div
-          className="card align-items-center  pt-2 "
-          style={{
-            backgroundColor: "rgba(0,0,0, 0)",
-            border: "3px #56d9f5 solid ",
-          }}
-        >
-          <img
-            src={adoptee10}
-            className="card-img-top object-fit-fill border rounded"
-            alt="Adoptee1"
-            style={{
-              height: "100%",
-              objectFit: "cover",
-              border: "2px #56d9f5 solid",
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Roko</h5>
-            <p
-              className="card-text"
-              style={{
-                width: "16rem",
-                height: "9rem",
-              }}
-            >
-              Male, adult.
-              <br />
-              <br />I very much love curling up next to you on the couch while
-              you work, watch the footy or Netflix.
-            </p>
-            <a
-              href="https://savinghope.co.nz/dogs/roko/"
-              className="btn btn-info"
-            >
-              Take Me Home!
-            </a>
-          </div> 
-        </div>*/}
       </div>
     </div>
-  );
+  ));
+  return <>{dogCards}</>;
 }
