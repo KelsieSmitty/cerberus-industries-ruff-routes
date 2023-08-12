@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans&family=Urbanist&display=swap");
+
+NavLink {
+}
+
+.custom-underline {
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+  font-family: "Urbanist";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.custom-underline:hover,
+.custom-underline:focus {
+  text-decoration: underline;
+}
+
+.nav-heading {
+  font-family: "Lilita One", cursive;
+  font-size: 2.5rem;
+}
