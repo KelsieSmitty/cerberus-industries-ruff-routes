@@ -10,8 +10,8 @@ export default function ExploreNavbar() {
       className="navbar text-center justify-content-center pt-4 pb-4 "
       expand="lg"
       style={{
-        backgroundColor: "rgba(245,245,245,1)",
-        // border: "2px #56d9f5 solid",
+        backgroundColor: "#ede9e6",
+
         color: "black",
         width: "100vw",
       }}
@@ -43,7 +43,7 @@ export default function ExploreNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto ps-5 pe-5">
             <Nav.Link
-              href="#explore"
+              href="/explore"
               style={{
                 color: "black",
                 paddingRight: "1rem",

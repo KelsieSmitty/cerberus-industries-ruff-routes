@@ -1,15 +1,14 @@
 import Explore from "./pages/explore";
 // import Home from './pages/home';
-import Test from "./pages/test";
+import Landing from "./pages/landing";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Explore />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
     </Router>
   );

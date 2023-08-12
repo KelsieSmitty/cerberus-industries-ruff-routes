@@ -36,7 +36,7 @@ export default function Cards() {
       className=" container-fluid pb-0 m-0"
       key={index}
       style={{
-        backgroundColor: "rgba(245,245,245,1)",
+        backgroundColor: "#ede9e6",
       }}
     >
       <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 mt-4">
@@ -52,7 +52,7 @@ export default function Cards() {
               borderWidth: "0.2rem",
               borderStyle: "solid",
               borderColor: "#000",
-              background: "#FFF9E9",
+              backgroundColor: "#ede9e6",
               boxShadow: "6px 6px 0px 0px #7B7B7B",
             }}
           >
@@ -124,7 +124,7 @@ export default function Cards() {
                   width: "10rem",
                 }}
               >
-                {item.rating} | {item.distance}
+                {item.distance} | {item.rating}
               </h5>
               <p
                 className="card-address text-start mb-5"

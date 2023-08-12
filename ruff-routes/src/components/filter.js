@@ -3,10 +3,11 @@ import { BiSolidTreeAlt } from "react-icons/bi";
 import { IoMdCafe, IoIosBed } from "react-icons/io";
 import { FaUmbrellaBeach, FaHamburger } from "react-icons/fa";
 import { GiTrail } from "react-icons/gi";
+import "../styling/filter.css";
 
 function Filter({ selectedFilters, onFilterChange }) {
   const [selectedButtons, setSelectedButtons] = useState([]);
-
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const handleButtonClick = (buttonName) => {
     if (selectedButtons.includes(buttonName)) {
       setSelectedButtons(selectedButtons.filter((btn) => btn !== buttonName));
@@ -15,9 +16,20 @@ function Filter({ selectedFilters, onFilterChange }) {
     }
   };
 
+  const handleCheckboxClick = (checkboxName) => {
+    if (selectedCheckboxes.includes(checkboxName)) {
+      setSelectedCheckboxes(
+        selectedCheckboxes.filter((checkbox) => checkbox !== checkboxName)
+      );
+    } else {
+      setSelectedCheckboxes([...selectedCheckboxes, checkboxName]);
+    }
+  };
+
   useEffect(() => {
     console.log("Selected buttons:", selectedButtons);
-  }, [selectedButtons]);
+    console.log("Selected checkboxes:", selectedCheckboxes);
+  }, [selectedButtons, selectedCheckboxes]);
 
   const createButton = (buttonName, icon, label) => {
     const isSelected = selectedButtons.includes(buttonName);
@@ -29,8 +41,23 @@ function Filter({ selectedFilters, onFilterChange }) {
         onClick={() => handleButtonClick(buttonName)}
         className={`filter-button ${buttonClass}`}
       >
-        <span>{icon}</span>
+        <span className="icon">{icon}</span>
         <p className="label">{label}</p>
+      </button>
+    );
+  };
+
+  const createCheckboxButton = (checkboxName, label) => {
+    const isChecked = selectedCheckboxes.includes(checkboxName);
+    const checkboxClass = isChecked ? "selected" : "";
+
+    return (
+      <button
+        key={checkboxName}
+        onClick={() => handleCheckboxClick(checkboxName)}
+        className={`filter-button2 ${checkboxClass}`}
+      >
+        {label}
       </button>
     );
   };
@@ -39,21 +66,19 @@ function Filter({ selectedFilters, onFilterChange }) {
     <div
       className="filter-container"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
         border: "2px solid black",
         padding: "10px",
-        minWidth: "200px",
-        width: "20%",
+        // maxWidth: "300px",
+        width: "100%",
         margin: "10px",
+
         borderRadius: "10px",
-        backgroundColor: "#ede9e6",
+        backgroundColor: "#EDE9E6",
         fontFamily: "Urbanist",
       }}
     >
       <label className="filter-label">Filters</label>
-      <div className="inline-block m-auto">
+      <div className="categories-btns">
         {createButton("park", <BiSolidTreeAlt />, "Park")}
         {createButton("beach", <FaUmbrellaBeach />, "Beach")}
         {createButton("hike", <GiTrail />, "Hike")}
@@ -61,18 +86,17 @@ function Filter({ selectedFilters, onFilterChange }) {
         {createButton("restaurant", <FaHamburger />, "Restaurant")}
         {createButton("housing", <IoIosBed />, "Housing")}
       </div>
-      <div>
+      <div className="d-flex flex-column">
         <p className="filter-sublabel">Accessibility</p>
-        <button className="filter-button2">Wheelchair accessible</button>
-        <button className="filter-button2">Stroller friendly</button>
+        {createCheckboxButton("wheelchair", "Wheelchair accessible")}
+        {createCheckboxButton("stroller", "Stroller friendly")}
       </div>
-      <div>
+      <div className="d-flex flex-column">
         <p className="filter-sublabel">Pet Policies</p>
-        <button className="filter-button2">Off leash permitted</button>
-        <button className="filter-button2">Must stay on leash</button>
+        {createCheckboxButton("off-leash", "Off leash permitted")}
+        {createCheckboxButton("leash", "Must stay on leash")}
       </div>
     </div>
   );
 }
-
 export default Filter;

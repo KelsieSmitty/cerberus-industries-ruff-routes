@@ -1,0 +1,130 @@
+html {
+  background-color: #ede9e6;
+  @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&family=Yeseva+One&display=swap");
+}
+.landing-container {
+  background-color: #ede9e6;
+}
+.hero {
+  margin: 2rem;
+  margin-top: 4rem;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.hero-card {
+  background-color: #f6f6f6;
+  width: 80%;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+    justify-content: flex-end; */
+}
+.text-content {
+  width: 60%;
+  font-family: "Urbanist", sans-serif;
+  margin-right: 3rem;
+}
+.card-heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.card-copy {
+  margin-bottom: 5rem;
+  font-weight: 500;
+}
+.hero-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff0c3;
+  font-weight: 600;
+  box-shadow: 5px 5px 0px #7b7b7b;
+}
+.hero-btn:hover {
+  background-color: #ddd;
+  transition: all 0.2s ease;
+}
+.hero-img > img {
+  min-width: 200px;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  /* height: 300px; */
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 3px solid black;
+  margin-top: -5rem;
+}
+/* .category-card-container {
+    border: 2px solid black;
+  } */
+.categories-heading {
+  text-align: center;
+  /* CHANGE FONT TO LILITA HERE */
+  margin-top: 7rem;
+}
+.category-card {
+  border-radius: 0.5rem;
+  border: 3px solid black;
+  background-color: #fff0c3;
+  box-shadow: 5px 5px 0px #7b7b7b;
+  width: 65%;
+  margin: 6rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.category-img > img {
+  /* min-width: 200px; */
+  aspect-ratio: 1 / 1;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid black;
+  margin-top: -5rem;
+  margin-left: -6rem;
+  text-transform: uppercase;
+}
+.category-card-flipped {
+  grid-template-columns: 2fr 1fr;
+}
+.category-img-flipped > img {
+  margin-left: 3rem;
+  margin-top: -5rem;
+  margin-right: -6rem;
+}
+.category-card-content {
+  font-family: "Urbanist", sans-serif;
+}
+.category-tags {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.category-header {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.category-desc {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+  color: #646464;
+}
+.category-btn {
+  padding: 0.3rem 1.5rem;
+  border: 2px solid black;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 0px #7b7b7b;
+}
+.category-btn:hover {
+  background-color: #ddd;
+  transition: all 0.2s ease;
+}
