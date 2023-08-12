@@ -121,24 +121,13 @@ export default function Cards() {
                   fontSize: "1.1rem",
                   fontWeight: "400",
                   fontFamily: "Lilita One",
-                  width: "6rem",
+                  width: "10rem",
                 }}
               >
-                {item.rating}
-              </h5>
-              <h5
-                className="card-distance"
-                style={{
-                  fontSize: "1.1rem",
-                  fontWeight: "400",
-                  fontFamily: "Lilita One",
-                  width: "3rem",
-                }}
-              >
-                {item.distance}
+                {item.rating} | {item.distance}
               </h5>
               <p
-                className="card-address text-start mb-3"
+                className="card-address text-start mb-5"
                 style={{
                   color: "#646464",
                   fontFamily: "Urbanist",
@@ -149,7 +138,7 @@ export default function Cards() {
               </p>
               <a
                 href={item.mapLink}
-                className=" map custom-button ps-2 pe-2 pt-1 pb-1"
+                className=" map custom-button ps-2 pe-2 pt-2 pb-2"
               >
                 Take me there! <FaLocationArrow />
               </a>
