@@ -31,6 +31,7 @@ export default function Cards() {
   };
 
   const dogCards = cardData.slice(0, displayedCards).map((item, index) => (
+    //filters cardData array to show only the displayed cards
     <div
       className=" container-fluid pb-0 m-0"
       key={index}
