@@ -3,58 +3,68 @@
     "name": "Pigeon Park",
     "rating": "4.5 ⭐",
     "distance": "1.2km",
-    "address": "Cnr K'Road and Symonds Streets, Auckland 1010"
+    "address": "Cnr K'Road and Symonds Streets, Auckland 1010",
+    "image": "https://3.bp.blogspot.com/_fzPZlQiV31s/SuQaDnbKuEI/AAAAAAAAC3M/KMTKvE6fxEg/s400/Twiss+01.JPG"
   },
   {
     "name": "Costley Reserve",
     "rating": "4.2  ⭐",
     "distance": "1.6km",
-    "address": "5 Costley Street, Freemans Bay, Auckland 1011"
+    "address": "5 Costley Street, Freemans Bay, Auckland 1011",
+    "image": "https://d28tt0c8sjydqj.cloudfront.net/7136/F8B59D75-643E-4EB3-2721-08D8DB479596.jpg"
   },
   {
     "name": "St Mary's Reserve",
     "rating": "4.4 ⭐",
     "distance": "1.9km",
-    "address": "15 Saint Marys Road, St Marys Bay, Auckland 1011"
+    "address": "15 Saint Marys Road, St Marys Bay, Auckland 1011",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwUhpyyK4OSWg7NLD_sbK62cR-zDI_nmBCMgq4FFMGMbk4ySe9WwgyY_Cu9rMAUWud6k&usqp=CAU"
   },
   {
     "name": "Brown Reserve",
     "rating": "5 ⭐",
     "distance": "2.2km",
-    "address": "10 Brown Street, Ponsonby, Auckland 1021"
+    "address": "10 Brown Street, Ponsonby, Auckland 1021",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwJeOEAhWb08jiyuVPmJsI94_b4EsvDkJOkUH5m_Rhz6pJPiYgIrn0zGQn59eyidF1II&usqp=CAU"
   },
   {
     "name": "Scarborough Reserve",
+    "image": "https://www.stirling.wa.gov.au/CityOfStirling/media/Images/Leisure%20and%20Culture/Venues%20and%20facilities/Beaches/Scarborough%20Beach/REC_ScarboroughBeach_MI2.jpg",
     "rating": "5 ⭐",
     "distance": "2.1km",
     "address": "16 Scarborough Terrace, Parnell, Auckland 1052"
   },
   {
     "name": "Alberon Reserve",
+    "image": "https://www.aucklandcouncil.govt.nz/Lists/ParksDetailImages/alberon-reserve-signs.jpg?width=759&height=416",
     "rating": "4.4 ⭐",
     "distance": "3.1km",
     "address": "21 Alberon Stret, Parnell, Auckland 1052"
   },
   {
     "name": "Teal Park",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Teal_Park.jpg",
     "rating": "4.3 ⭐",
     "distance": "2.9km",
     "address": "5 Solent St, Auckland 1052"
   },
   {
     "name": "Maungawhau Fenced Dog Park",
+    "image": "https://www.aucklandcouncil.govt.nz/Lists/ParkPlaygroundImages/maungawhau-mteden-playground.jpg?width=759&height=416",
     "rating": "0 ⭐",
     "distance": "3.3km",
     "address": "30 Clive Rd, Mount Eden, Auckland 1022"
   },
   {
     "name": "Thomas Bloodworth Park",
+    "image": "https://www.aucklandcouncil.govt.nz/Lists/ParksDetailImages/thomas-bloodworth-park-bridge-entry.jpg?width=759&height=416",
     "rating": "4.5 ⭐",
     "distance": "3.6km",
     "address": "9 Shore Rd, Remuera, Auckland 1025"
   },
   {
     "name": "Waiata Reserve",
+    "image": "https://www.aucklandcouncil.govt.nz/parks-recreation/get-outdoors/aklpaths/AKLPathImages/138_RemueraLoopPath1.jpg?RenditionID=8",
     "rating": "4.5 ⭐",
     "distance": "6.3km",
     "address": "17 Waimea Ln, Remuera, Auckland 1022"

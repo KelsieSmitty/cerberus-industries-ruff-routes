@@ -11,9 +11,9 @@ export default function Cards() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:4000/locations")
-      .then((r) => r.json())
-      .then((r) => setData(r));
+    // fetch("http://localhost:4000/locations")
+    //   .then((r) => r.json())
+    //   .then((r) => setData(r));
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -70,7 +70,7 @@ export default function Cards() {
             }}
           >
             <img
-              src={hikingDog}
+              src={item.image}
               className="card-img-left border rounded"
               alt="Hiking Dog"
               style={{
