@@ -4,11 +4,17 @@ import cardData from "../data/cardData.json";
 import { FaLocationArrow } from "react-icons/fa";
 
 export default function Cards() {
-  const [displayedCards, setDisplayedCards] = useState(5); //initial displayed #
+  const [displayedCards, setDisplayedCards] = useState(4); //initial displayed #
   const cardsToAdd = 5; //how many cards to add when trigger point is hit
   const totalCards = cardData.length; //get total # of cards available in the cardData
 
+  const [data, setData] = useState();
+
   useEffect(() => {
+    fetch("http://localhost:4000/locations")
+      .then((r) => r.json())
+      .then((r) => setData(r));
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -29,6 +35,13 @@ export default function Cards() {
     const newDisplayedCards = Math.min(displayedCards + cardsToAdd, totalCards); //makes sure the new dispalyed cards isn't more than the # of datacards
     setDisplayedCards(newDisplayedCards); //updates state
   };
+
+  // console.log("b");
+  // console.log(JSON.parse(data));
+  // for (var i = 0; i < 9; i++) {
+  //   cardData[i].img = [data][i]["photos"]["photo_reference"];
+  // }
+  // console.log(cardData);
 
   const dogCards = cardData.slice(0, displayedCards).map((item, index) => (
     //filters cardData array to show only the displayed cards

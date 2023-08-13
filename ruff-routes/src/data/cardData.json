@@ -1,93 +1,62 @@
 [
   {
-    "name": "Meola Reef Dog Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Pigeon Park",
+    "rating": "4.5 ⭐",
+    "distance": "1.2km",
+    "address": "Cnr K'Road and Symonds Streets, Auckland 1010"
   },
   {
-    "name": "The Garden Shed",
-    "rating": "4.3  ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Costley Reserve",
+    "rating": "4.2  ⭐",
+    "distance": "1.6km",
+    "address": "5 Costley Street, Freemans Bay, Auckland 1011"
   },
   {
-    "name": "Churchill Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "St Mary's Reserve",
+    "rating": "4.4 ⭐",
+    "distance": "1.9km",
+    "address": "15 Saint Marys Road, St Marys Bay, Auckland 1011"
   },
   {
-    "name": "Cornwall Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Brown Reserve",
+    "rating": "5 ⭐",
+    "distance": "2.2km",
+    "address": "10 Brown Street, Ponsonby, Auckland 1021"
   },
   {
-    "name": "Meola Reef Dog Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Scarborough Reserve",
+    "rating": "5 ⭐",
+    "distance": "2.1km",
+    "address": "16 Scarborough Terrace, Parnell, Auckland 1052"
   },
   {
-    "name": "The Garden Shed",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Alberon Reserve",
+    "rating": "4.4 ⭐",
+    "distance": "3.1km",
+    "address": "21 Alberon Stret, Parnell, Auckland 1052"
   },
   {
-    "name": "Churchill Park",
+    "name": "Teal Park",
     "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "distance": "2.9km",
+    "address": "5 Solent St, Auckland 1052"
   },
   {
-    "name": "Meola Reef Dog Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Maungawhau Fenced Dog Park",
+    "rating": "0 ⭐",
+    "distance": "3.3km",
+    "address": "30 Clive Rd, Mount Eden, Auckland 1022"
   },
   {
-    "name": "The Garden Shed",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Thomas Bloodworth Park",
+    "rating": "4.5 ⭐",
+    "distance": "3.6km",
+    "address": "9 Shore Rd, Remuera, Auckland 1025"
   },
   {
-    "name": "Churchill Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
-  },
-  {
-    "name": "Meola Reef Dog Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
-  },
-  {
-    "name": "The Garden Shed",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
-  },
-  {
-    "name": "Churchill Park",
-    "rating": "4.3 ⭐",
-    "distance": "2.3km",
-    "address": "81-189 Meola Road, Western Springs, Auckland 1022",
-    "mapLink": "https://savinghope.co.nz/dogs/maverick/"
+    "name": "Waiata Reserve",
+    "rating": "4.5 ⭐",
+    "distance": "6.3km",
+    "address": "17 Waimea Ln, Remuera, Auckland 1022"
   }
 ]
