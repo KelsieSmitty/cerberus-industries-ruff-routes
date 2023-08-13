@@ -14,3 +14,16 @@ li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+.map-img{
+  width:100%;
+  margin-left:10px;
+}
+
+.header-font{
+  font-family: 'Lilita One', cursive;
+  margin:10px;
+}
+
+

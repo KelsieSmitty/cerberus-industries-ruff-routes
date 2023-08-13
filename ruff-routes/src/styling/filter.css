@@ -2,6 +2,7 @@
   font-size: 1.5rem;
   font-weight: 900;
   margin: 10px;
+  font-family: 'Lilita One', cursive;
 }
 .categories-btns {
   display: flex;
@@ -35,7 +36,7 @@ button.selected {
   font-weight: 700;
 }
 .filter-sublabel {
-  font-family: "Urbanist";
+  font-family: 'Lilita One', cursive;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 10px;

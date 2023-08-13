@@ -87,6 +87,12 @@ function Filter({ selectedFilters, onFilterChange }) {
         {createButton("housing", <IoIosBed />, "Housing")}
       </div>
       <div className="d-flex flex-column">
+        <p className="filter-sublabel">Distance from me</p>
+        {createCheckboxButton("lessthan5", "< 5km")}
+        {createCheckboxButton("5to15", "5km - 15km")}
+        {createCheckboxButton("morethan15", "15km +")}
+      </div>
+      <div className="d-flex flex-column">
         <p className="filter-sublabel">Accessibility</p>
         {createCheckboxButton("wheelchair", "Wheelchair accessible")}
         {createCheckboxButton("stroller", "Stroller friendly")}
